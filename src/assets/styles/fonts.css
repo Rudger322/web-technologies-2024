@@ -21,3 +21,12 @@
          url("/static/fonts/Inter-Regular.woff2") format("woff");
     font-weight: 400;
 }
+
+@font-face {
+    font-family: "italic";
+    src: local('Italic'), local('Italic'), local('Italic'),
+         url("/static/fonts/italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
