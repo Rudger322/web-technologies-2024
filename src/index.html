@@ -6,22 +6,91 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="icon-mobile" viewBox="0 0 14 20">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.18001 1.89997H7.82C8.9138 1.89997 9.6259 1.90138 10.1693 1.94577C10.6916 1.98845 10.8976 2.06172 11.008 2.11796C11.3843 2.30971 11.6903 2.61567 11.882 2.99199C11.9383 3.10238 12.0115 3.30838 12.0542 3.83072C12.0986 4.37408 12.1 5.08617 12.1 6.17998V13.82C12.1 14.9138 12.0986 15.6259 12.0542 16.1693C12.0115 16.6916 11.9383 16.8976 11.882 17.008C11.6903 17.3843 11.3843 17.6903 11.008 17.882C10.8976 17.9383 10.6916 18.0115 10.1693 18.0542C9.6259 18.0986 8.9138 18.1 7.82 18.1H6.18001C5.08621 18.1 4.37411 18.0986 3.83075 18.0542C3.30841 18.0115 3.10242 17.9383 2.99203 17.882C2.6157 17.6903 2.30974 17.3843 2.11799 17.008C2.06175 16.8976 1.98848 16.6916 1.9458 16.1693C1.90141 15.6259 1.90001 14.9138 1.90001 13.82V6.17997C1.90001 5.08617 1.90141 4.37408 1.9458 3.83072C1.98848 3.30838 2.06175 3.10239 2.11799 2.99199C2.30974 2.61567 2.6157 2.30971 2.99203 2.11796C3.10242 2.06172 3.30841 1.98845 3.83075 1.94577C4.37411 1.90138 5.08621 1.89997 6.18001 1.89997ZM0.100006 6.17997C0.100006 4.05177 0.100006 2.98768 0.514181 2.17481C0.8785 1.4598 1.45983 0.878469 2.17484 0.514151C2.98771 0.0999754 4.05181 0.0999756 6.18001 0.0999756H7.82C9.9482 0.0999756 11.0123 0.0999754 11.8252 0.514151C12.5402 0.878469 13.1215 1.4598 13.4858 2.17481C13.9 2.98768 13.9 4.05178 13.9 6.17998V13.82C13.9 15.9482 13.9 17.0123 13.4858 17.8252C13.1215 18.5402 12.5402 19.1215 11.8252 19.4858C11.0123 19.9 9.9482 19.9 7.82 19.9H6.18001C4.05181 19.9 2.98771 19.9 2.17484 19.4858C1.45983 19.1215 0.8785 18.5402 0.514181 17.8252C0.100006 17.0123 0.100006 15.9482 0.100006 13.82V6.17997ZM6.25 14.2C5.75294 14.2 5.35 14.6029 5.35 15.1C5.35 15.597 5.75294 16 6.25 16H7.75C8.24706 16 8.65 15.597 8.65 15.1C8.65 14.6029 8.24706 14.2 7.75 14.2H6.25Z" fill="#2D66EE"/>
+        </symbol>
+        <symbol id="icon-list" viewBox="0 0 20 16">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.79998 0.100006H5.76228H5.76225C4.95421 0.0999965 4.29336 0.0999884 3.75629 0.143869C3.20038 0.189289 2.6983 0.286171 2.22941 0.525082C1.49558 0.898988 0.898957 1.49561 0.525051 2.22944C0.28614 2.69833 0.189258 3.20041 0.143838 3.75632C0.0999575 4.2934 0.0999658 4.95424 0.0999759 5.76229V5.76231V5.80001V10.2V10.2377V10.2377C0.0999658 11.0458 0.0999575 11.7066 0.143838 12.2437C0.189258 12.7996 0.28614 13.3017 0.525051 13.7706C0.898957 14.5044 1.49558 15.101 2.22941 15.4749C2.6983 15.7138 3.20038 15.8107 3.75629 15.8561C4.29337 15.9 4.95422 15.9 5.76227 15.9H5.79998H14.2H14.2377C15.0457 15.9 15.7066 15.9 16.2437 15.8561C16.7996 15.8107 17.3017 15.7138 17.7705 15.4749C18.5044 15.101 19.101 14.5044 19.4749 13.7706C19.7138 13.3017 19.8107 12.7996 19.8561 12.2437C19.9 11.7066 19.9 11.0458 19.9 10.2377V10.2V5.80001V5.7623C19.9 4.95425 19.9 4.2934 19.8561 3.75632C19.8107 3.20041 19.7138 2.69833 19.4749 2.22944C19.101 1.49561 18.5044 0.898988 17.7705 0.525082C17.3017 0.286171 16.7996 0.189289 16.2437 0.143869C15.7066 0.0999884 15.0457 0.0999965 14.2377 0.100006H14.2377H14.2H5.79998ZM3.38061 2.01217C3.51618 1.98082 3.68477 1.95571 3.90287 1.93789C4.35798 1.90071 4.94505 1.90001 5.79998 1.90001H14.2C15.0549 1.90001 15.642 1.90071 16.0971 1.93789C16.3152 1.95571 16.4838 1.98082 16.6193 2.01217L12.6103 5.52009C12.0325 6.02567 11.6369 6.37103 11.3074 6.61738C10.987 6.85699 10.7832 6.96055 10.6069 7.0127C10.2107 7.12984 9.78921 7.12984 9.3931 7.0127C9.21676 6.96055 9.01295 6.85699 8.69253 6.61738C8.3631 6.37103 7.96747 6.02568 7.38967 5.52009L3.38061 2.01217ZM2.05037 3.24C2.00084 3.39568 1.96243 3.60224 1.93786 3.9029C1.90068 4.35801 1.89998 4.94508 1.89998 5.80001V10.2C1.89998 11.0549 1.90068 11.642 1.93786 12.0971C1.97419 12.5417 2.04079 12.7805 2.12886 12.9534C2.3302 13.3485 2.65146 13.6698 3.0466 13.8711C3.21944 13.9592 3.45827 14.0258 3.90287 14.0621C4.35798 14.0993 4.94505 14.1 5.79998 14.1H14.2C15.0549 14.1 15.642 14.0993 16.0971 14.0621C16.5417 14.0258 16.7805 13.9592 16.9534 13.8711C17.3485 13.6698 17.6698 13.3485 17.8711 12.9534C17.9592 12.7805 18.0258 12.5417 18.0621 12.0971C18.0993 11.642 18.1 11.0549 18.1 10.2V5.80001C18.1 4.94508 18.0993 4.35801 18.0621 3.9029C18.0375 3.60224 17.9991 3.39568 17.9496 3.24L13.7956 6.87473L13.7694 6.89767C13.2242 7.37468 12.7768 7.76621 12.3854 8.05889C11.9787 8.36299 11.5796 8.6021 11.1173 8.7388C10.388 8.95447 9.61192 8.95447 8.88265 8.7388C8.4204 8.6021 8.02121 8.36299 7.61455 8.05889C7.22317 7.76622 6.77574 7.37471 6.23062 6.89771L6.20436 6.87473L2.05037 3.24Z" fill="#2D66EE"/>
+        </symbol>
+    </svg>
+      
+
     <!-- Шапка сайта -->
     <header class="site-header">
+        <div class="logo">
+            IT WEBSITE
+        </div>
         <nav class="main-navigation">
-            
-        </nav>
-    </header>
-
-    <div class="hello_page">
-        <p class="hello_text"></p>
-        <div class="hello_contactform">
-            <div class="hello_form">
-
+            <div class="nav_point">
+                Services
             </div>
+            <div class="nav_point">
+                Media
+            </div>
+            <div class="nav_point">
+                Cases
+            </div>
+            <div class="nav_point">
+                FAQ
+            </div>
+            <div class="nav_point">
+                Contacts
+            </div>
+        </nav>
+        <div class="contact">
+            <div class="numbers">
+                <svg width="14" height="20">
+                    <use xlink:href="#icon-mobile"></use>
+                </svg>
+                <div class="number blue_text">+7 (111) 111 11 11</div>
+                <div class="number blue_text">+7 (111) 111 11 11</div>
+            </div>
+            <div class="email_box">
+                <svg width="20" height="16">
+                    <use xlink:href="#icon-list"></use>
+                </svg>
+                <div class="email blue_text">itcompany@mail.com</div>
+            </div>
+
+        </div>
+    </header>
+    <div class="hello_page_wrap">
+        <div class="hello_page">
+            <p class="hello_text">Development of <span class="blue_text">mobile</span> <br> <span class="blue_text">applications</span> and <span class="blue_text">web services</span> of<br> any complexity</p>
+            <p class="hello_descr">We create mobile applications for iOS, Android that transfer your business to mobile<br> applications of your customers' devices</p>
+            <div class="hello_contactform">
+                <div class="hello_form">
+                    <p class="hello_form_text">Leave your contacts and we will call you back
+                        <br>within 30 minutes</p>
+                    <div class="hello_form_wrap">
+                        <div class="hello_phone">
+                            <div class="hello_form_form_text">Phone number</div>
+                            <div class="hello_phone_wrap">
+                                <img src="assets/icons/🇰🇿.png" alt="Description of the image" width="16" height="20">
+                                <div class="hello_form_field">+7 (111) 111-11-11</div>
+                            </div>
+                        </div>
+                        <div class="hello_fullname">
+                            <div class="hello_form_form_text">Full name</div>
+                            <div class="hello_form_field">Иван Иванов</div>
+                        </div>
+                        <div class="hello_button">Get<br> consultation</div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        <div class="hello_background_wrap">
+            <img src="assets/img/главная со списком организации.jpg" alt="" class="bg-image img1">
+            <img src="assets/img/детали отзыва.jpg" alt="" class="bg-image img2">
+            <img src="assets/img/комментарии к отзыву.jpg" alt="" class="bg-image img3">
+            <img src="assets/img/настройки.jpg" alt="" class="bg-image img4">
+            <img src="assets/img/новый чат.jpg" alt="" class="bg-image img5">
+            <img src="assets/img/Сообщения.jpg" alt="" class="bg-image img6">
         </div>
     </div>
     <hr>
@@ -116,12 +185,40 @@
     </div>
 
     <footer class="site-footer">
-        <ul class="footer_list">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-        </ul>
+        <h1 class="footer_logo">IT WEBSITE</h1>
+        <div class="footer_info_wrap">
+            <div class="footer_info_block">
+                <div class="footer_info_textblock">
+                    <img src="" alt="">
+                    <div class="footer_info_text">Contact nums</div>
+                </div>
+                <div class="footer_info_main_text">+7 (778) 395 90 26</div>
+            </div>
+            <div class="footer_info_block">
+                <div class="footer_info_textblock">
+                    <img src="" alt="">
+                    <div class="footer_info_text">Post</div>
+                </div>
+                <div class="footer_info_main_text">mail@mail.com</div>
+            </div>
+            <div class="footer_info_block">
+                <div class="footer_info_textblock">
+                    <img src="" alt="">
+                    <div class="footer_info_text">Adress</div>
+                </div>
+                <div class="footer_info_main_text">City city, street st.90</div>
+            </div>
+            <div class="footer_info_block">
+                <div class="footer_info_textblock">
+                    <img src="" alt="">
+                    <div class="footer_info_text">Leave a request</div>
+                </div>
+                <div class="footer_info_main_text">Leave a request</div>
+            </div>
+        </div>
+        <div class="footer_last_word">
+            We work troughout world
+        </div>
     </footer>
 </body>
 </html>
