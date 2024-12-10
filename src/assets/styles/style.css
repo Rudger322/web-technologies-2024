@@ -310,43 +310,19 @@ body {
     grid-template-columns: 50% 50%;
     grid-template-rows: 30% 30% 30%;
     z-index: 0;
-    display: none;
-}
-.img1{
-    position: relative;
-    left: 700px;
-}
-.img2{
-    position: relative;
-    left: 250px;
-    bottom: 70px;
-}
-.img3{
-    position: relative;
-    top: 70px;
-    left: 830px;
-}
-.img4{
-    position: relative;
-    left: 380px;
-}
-.img5{
-    position: relative;
-    top: 150px;
-    left: 960px;
-}
-.img6{
-    position: relative;
-    top: 80px;
-    left: 510px;
-}
-.bg-image{
-    width: 36%;
-    height: auto;
+    column-gap: 20px;
+    row-gap: 60px;
+    left: 900px;
     transform: rotate(-12deg);
+}
+
+.bg-image{
+    width: 312px;
+    height: 672px;
     border-radius: 24px;
 }
 .block_cycle{
+    z-index: 4;
     width: 100vw;
     max-width: 100%;
     padding: 80px 108px;
@@ -354,6 +330,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background-color: #fff;
 }
 .cycle_text{
     max-width: 600px;
@@ -549,6 +526,15 @@ body {
     .hello_contactform{
         max-width: 393px;
         max-height: 356px;
+        z-index: 10;
+    }
+    .hello_text{
+        margin-top: 78px;
+        max-width: 425px;
+    }
+    .hello_descr{
+        padding-right: 24px;
+        max-width: 425px;
     }
     .hello_form_wrap{
         flex-wrap: wrap;
@@ -556,6 +542,15 @@ body {
     .hello_fullname{
         margin-bottom: 32px;
         margin-top: 32px;
+    }
+    .hello_background_wrap{
+        left: 500px;
+        row-gap: 30px;
+        column-gap: 10px;
+    }
+    .bg-image{
+        width: 146px;
+        height: 318px;
     }
     .block_cycle{
         padding-left: 33px;
@@ -576,17 +571,29 @@ body {
         padding-left: 16px;
         align-items: center;
         justify-content: start;
+        gap: 0;
+    }
+    .hello_page_wrap{
+        min-height: 1267px;
+        align-items: start;
     }
     .hello_text{
         padding-left: 24px;
         padding-right: 24px;
-        margin-top: 78px;
+        margin-top: 138px;
         max-width: 425px;
+        margin-bottom: 24px;
     }
     .hello_descr{
         padding-left: 24px;
         padding-right: 24px;
         max-width: 425px;
+        margin-bottom: 512px;
+        margin-top: 0;
+    }
+    .hello_background_wrap{
+        left: 150px;
+        top: 420px;
     }
     .mobile_menu_contact{
         justify-content: center;
