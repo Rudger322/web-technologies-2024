@@ -74,11 +74,10 @@ function init() {
 
     const items = new ListItems(document.getElementById('list-items'), data)
 
-
-  /*  items.render()*/
+    items.render()
     items.init()
 
-    /*console.log(items.renderTest(data));*/
+    console.log(items.renderTest(data));
 
     function ListItems(el, data) {
         this.el = el;
@@ -95,10 +94,57 @@ function init() {
         }
 
         this.render = function () {
-            this.el.insertAdjacentHTML('beforeend', this.renderParent(this.data))
+            this.el.appendChild(this.renderParent(this.data))
         }
 
         this.renderParent = function (data) {
+            
+            if (data.hasChildren) {
+                let parentElem = document.createElement('div');
+                parentElem.classList.add('list-item', 'list-item_open');
+                parentElem.setAttribute('data-parent', '');
+
+                let mainWrap = document.createElement('div');
+                mainWrap.classList.add('list-item__inner');
+                
+                
+                const arrow = document.createElement('img');
+                arrow.classList.add('list-item__arrow');
+                arrow.setAttribute('src', 'img/chevron-down.png');
+                arrow.setAttribute('alt', 'chevron-down');
+                arrow.setAttribute('data-open', '');
+                mainWrap.appendChild(arrow);
+    
+                const folder = document.createElement('img');
+                folder.classList.add('list-item__folder');
+                folder.setAttribute('src', 'img/folder.png');
+                folder.setAttribute('alt', 'folder');
+                mainWrap.appendChild(folder);
+    
+                const span = document.createElement('span');
+                span.textContent = data.name;
+
+                mainWrap.appendChild(span);
+                parentElem.appendChild(mainWrap);
+                let listElems = document.createElement('div');
+                listElems.classList.add('list-item__items');
+
+                let lastElem = document.createElement('div');
+                lastElem.classList.add('list-item__items');
+                for (let i = 0; i < data.items.length; i++) {
+                    let newElems = this.renderParent(data.items[i]); 
+                    
+                    listElems.appendChild(newElems);
+                    
+                    
+                }
+                parentElem.appendChild(listElems);
+                    
+                return parentElem;
+            } else{
+                return this.renderChildren(data);
+            }
+            
             //проверка всех элементов на hasChildren
             //если hasChildren, то запускаем renderParent
             //если !hasChildren, то запускаем renderChildren
@@ -107,18 +153,35 @@ function init() {
         }
 
         this.renderChildren = function (data) {
-            //вовзращает рендер элемента без вложенности
+            let parentElem = document.createElement('div');
+            parentElem.classList.add('list-item');
+
+            let mainWrap = document.createElement('div');
+            mainWrap.classList.add('list-item__inner');
+
+            const folder = document.createElement('img');
+            folder.classList.add('list-item__folder');
+            folder.setAttribute('src', 'img/folder.png');
+            folder.setAttribute('alt', 'folder');
+            mainWrap.appendChild(folder);
+
+            const span = document.createElement('span');
+            span.textContent = data.name;
+
+            mainWrap.appendChild(span);
+            parentElem.appendChild(mainWrap);
+            return parentElem;
         }
 
         this.toggleItems = function (parent) {
             parent.classList.toggle('list-item_open')
         }
 
-/*        this.renderTest = function (data) {
+        this.renderTest = function (data) {
             return `
             <div class="test">${data.name}</div>
             `
-        }*/
+        }
     }
 
 }
