@@ -1,0 +1,44 @@
+$color_1: yellow;
+$color_2: red;
+$color_3: #2D66EE;
+$color_4: black;
+$color_5: #667085;
+$color_6: #fff;
+$color_7: #101828;
+$color_8: white;
+$color_9: #98A2B3;
+$color_10: #FFFFFF;
+$color_11: #ffffff;
+$font-family_1: Inter;
+$font-family_2: SF_Pro_Text;
+$font-family_3: 'Inter';
+$font-family_4: "SF_Pro_Text";
+$font-family_5: 'SF_Pro_Text';
+$font-family_6: SF Pro Text;
+$background-color_1: white;
+$background-color_2: #FFFFFF;
+$background-color_3: #fff;
+$background-color_4: #101828;
+
+@import "./global.css";
+@import "./fonts.css";
+@import "./utils.css";
+.test {
+	color: $color_1 !important;
+	color: $color_2 !important;
+}
+* {
+	box-sizing: border-box;
+}
+.blue_text {
+	color: $color_3;
+	font-size: 14;
+}
+body {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 0px;
+	align-content: center;
+}

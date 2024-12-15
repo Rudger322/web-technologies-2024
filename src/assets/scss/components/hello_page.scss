@@ -1,0 +1,123 @@
+.hello_page {
+	max-width: 1440px;
+	background: #F2F4F7;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 0px 0px 0px 108px;
+}
+.hello_text {
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1.4;
+	text-align: left;
+}
+.hello_descr {
+	font-size: 15px;
+	font-weight: 500;
+	text-align: left;
+	line-height: 1.5;
+}
+.hello_contactform {
+	width: 100%;
+	max-width: 676px;
+	max-height: 186px;
+	background: #FFFFFF;
+	border-radius: 12px;
+	padding: 0px 20px 20px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.hello_form_wrap {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.hello_form_text {
+	font-family: $font-family_3;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+}
+.hello_form_flag {
+	width: 16px;
+	height: 20px;
+}
+.hello_phone_wrap {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: center;
+}
+.hello_form_field {
+	font-family: $font-family_4;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 22px;
+	letter-spacing: -0.40799999237060547px;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+}
+.hello_phone {
+	width: 224px;
+	border-bottom: 1px solid #D0D5DD;
+	padding: 0px 0px 8px 0px;
+}
+.hello_fullname {
+	width: 224px;
+	border-bottom: 1px solid #D0D5DD;
+	padding: 0px 0px 8px 0px;
+}
+.hello_form_form_text {
+	font-family: $font-family_5;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 16px;
+	letter-spacing: -0.07800000160932541px;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+	margin-bottom: 8px;
+	color: $color_5;
+}
+.hello_button {
+	width: 132px;
+	height: 58px;
+	border-radius: 8px 8px 8px 8px;
+	background: #2D66EE;
+	font-family: $font-family_5;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 18px;
+	letter-spacing: -0.15399999916553497px;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+	color: $color_6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.hello_background_wrap {
+	position: absolute;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 30% 30% 30%;
+	z-index: 0;
+	column-gap: 20px;
+	row-gap: 60px;
+	left: 900px;
+	transform: rotate(-12deg);
+}
+.bg-image {
+	width: 312px;
+	height: 672px;
+	border-radius: 24px;
+}

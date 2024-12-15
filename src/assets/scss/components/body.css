@@ -1,0 +1,25 @@
+@import "./global.css";
+@import "./fonts.css";
+@import "./utils.css";
+.test {
+  color: yellow !important;
+  color: red !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.blue_text {
+  color: #2D66EE;
+  font-size: 14;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0px;
+  align-content: center;
+}/*# sourceMappingURL=body.css.map */
