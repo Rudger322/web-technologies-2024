@@ -86,6 +86,7 @@ function LoadClick(){
 
       myPizza.type = button.dataset.type;
       console.log(`Выбрана пицца: ${myPizza.type}`);
+      document.getElementById("showPrice").setAttribute("value",`Цена: ${myPizza.calculatePrice()} руб. Калорийность: ${myPizza.calculateCalories()} ккал`);
     });
   });
 
@@ -96,6 +97,7 @@ function LoadClick(){
 
       myPizza.size = button.dataset.size;
       console.log(`Выбран размер: ${myPizza.size}`);
+      document.getElementById("showPrice").setAttribute("value",`Цена: ${myPizza.calculatePrice()} руб. Калорийность: ${myPizza.calculateCalories()} ккал`);
     });
   });
 
@@ -112,12 +114,9 @@ function LoadClick(){
         button.classList.add("active");
         console.log(`Добавлен топпинг: ${topping}`);
       }
+      document.getElementById("showPrice").setAttribute("value",`Цена: ${myPizza.calculatePrice()} руб. Калорийность: ${myPizza.calculateCalories()} ккал`);
     });
   });
-
-  document.getElementById("body").addEventListener("mousemove", () => {
-    document.getElementById("showPrice").setAttribute("value",`Цена: ${myPizza.calculatePrice()} руб. Калорийность: ${myPizza.calculateCalories()} ккал`);
-      });
 }
 
 function ListPizza() {
