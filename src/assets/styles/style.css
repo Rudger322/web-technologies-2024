@@ -6,3 +6,7 @@
 @import "./form.css";
 @import "./text-field.css";
 @import "./button.css";
+.done {
+    text-decoration: line-through;
+    color: gray;
+}

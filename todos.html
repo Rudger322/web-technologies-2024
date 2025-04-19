@@ -18,7 +18,32 @@
 </header>
 
 <main class="main">
+    <form
+        id="todo-form"
+        class="form"
+    >
+        <label class="text-field">
+            <input
+                type="text"
+                class="text-field__input"
+                name="todo"
+                placeholder="Задача"
+            >
+            <span class="text-field__error"></span>
+        </label>
 
+        <button
+            type="submit"
+            class="button"
+        >
+            Добавить
+        </button>
+    </form>
+    <div class="todos" id="todos">
+
+    </div>
+    <button class="button" id="todos_button">Обновить задачи</button>
+    <button class="button" id="delete_button">Удалить отмеченные задачи</button>
 </main>
 
 <div class="loader-wrapper" data-loading>
