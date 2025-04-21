@@ -1,25 +1,83 @@
 <?php
-$title = "Hello world";
-$h1 = "Hello world";
-$year = date("Y");
-function getCurrentTimeWithDeclension() {
-    $hours = (int)date('G');
-    $minutes = (int)date('i');
+// задание 1
 
-    $hourText = declension($hours, ['час', 'часа', 'часов']);
-    $minuteText = declension($minutes, ['минута', 'минуты', 'минут']);
-
-    return "$hours $hourText $minutes $minuteText";
+function func(){
+    $a = rand(-5,5);
+    $b = rand(-5,5);
+    if($a>=0 || $b>=0){
+        return $a - $b;
+    };
+    if($a<0 || $b<0){
+        return $a * $b;
+    } else{
+        return $a + $b;
+    };
 }
-
-function declension($number, $forms) {
-    $n = abs($number) % 100;
-    $n1 = $n % 10;
-
-    if ($n > 10 && $n < 20) return $forms[2];
-    if ($n1 > 1 && $n1 < 5) return $forms[1];
-    if ($n1 == 1) return $forms[0];
-    return $forms[2];
+// задание 2
+function func2(){
+    $a = rand(0,15);
+    switch ($a) {
+        case 0:
+            echo 0;
+        case 1:
+            echo 1;
+        case 2:
+            echo 2;
+        case 3:
+            echo 3;
+        case 4:
+            echo 4;
+        case 5:
+            echo 5;
+        case 5:
+            echo 5;
+        case 6:
+            echo 6;
+        case 7:
+            echo 7;
+        case 8:
+            echo 8;
+        case 9:
+            echo 9;
+        case 10:
+            echo 10;
+        case 11:
+            echo 11;
+        case 12:
+            echo 12;
+        case 13:
+            echo 13;
+        case 14:
+            echo 14;
+        case 15:
+            echo 15;
+    }
+}
+// задание 3
+function addition($a, $b){
+    return $a + $b;
+};
+function subtraction($a, $b){
+    return $a - $b;
+};
+function multiplication($a, $b){
+    return $a * $b;
+};
+function division($a, $b){
+    return $a / $b;
+};
+// задание 4
+function mathOperation($arg1, $arg2, $operation){
+    switch ($operation){
+        case '+':
+            return addition($arg1,$arg2);
+        case '-':
+            return subtraction($arg1,$arg2);
+        case '*':
+            return multiplication($arg1,$arg2);
+        case '/':
+            return division($arg1,$arg2);    
+    }
 }
 ?>
 
@@ -32,8 +90,5 @@ function declension($number, $forms) {
     <title><?= $title ?></title>
 </head>
 <body>
-    <h1><?= $h1 ?></h1>
-    <p>Текущий год <?= $year ?></p>
-    <p>Текущее время <?=  getCurrentTimeWithDeclension()?></p>
 </body>
 </html>
