@@ -1,84 +1,95 @@
 <?php
 // задание 1
 
-function func(){
-    $a = rand(-5,5);
-    $b = rand(-5,5);
-    if($a>=0 || $b>=0){
-        return $a - $b;
-    };
-    if($a<0 || $b<0){
-        return $a * $b;
-    } else{
-        return $a + $b;
-    };
-}
+function func($i){
+    do {
+        echo $i;
+        if($i == 0){
+            echo ' - это ноль';
+        } else
+        if($i % 2 == 0){
+            echo ' - четное число';
+        } else{
+            echo ' - нечетное число';
+        };
+        echo '<br>';
+        $i++;
+    } while ($i<=10);
+};
+func(5);
 // задание 2
-function func2(){
-    $a = rand(0,15);
-    switch ($a) {
-        case 0:
-            echo 0;
-        case 1:
-            echo 1;
-        case 2:
-            echo 2;
-        case 3:
-            echo 3;
-        case 4:
-            echo 4;
-        case 5:
-            echo 5;
-        case 5:
-            echo 5;
-        case 6:
-            echo 6;
-        case 7:
-            echo 7;
-        case 8:
-            echo 8;
-        case 9:
-            echo 9;
-        case 10:
-            echo 10;
-        case 11:
-            echo 11;
-        case 12:
-            echo 12;
-        case 13:
-            echo 13;
-        case 14:
-            echo 14;
-        case 15:
-            echo 15;
-    }
-}
+$regions = [
+    "Московская область" => ["Москва", "Зеленоград", "Клин"],
+    "Ленинградская область" => ["Санкт-Петербург", "Всеволожск", "Павловск", "Кронштадт"],
+    "Рязанская область" => ["Рязань", "Касимов", "Скопин"]
+];
+
+foreach ($regions as $region => $cities) {
+    echo $region . ":\n";
+    echo implode(", ", $cities) . ".\n";
+    echo '<br>';
+};
 // задание 3
-function addition($a, $b){
-    return $a + $b;
+function func3($word){
+    $translit = [
+        'а' => 'a',
+        'б' => 'b',
+        'в' => 'v',
+        'г' => 'g',
+        'д' => 'd',
+        'е' => 'e',
+        'ё' => 'yo',
+        'ж' => 'zh',
+        'з' => 'z',
+        'и' => 'i',
+        'й' => 'y',
+        'к' => 'k',
+        'л' => 'l',
+        'м' => 'm',
+        'н' => 'n',
+        'о' => 'o',
+        'п' => 'p',
+        'р' => 'r',
+        'с' => 's',
+        'т' => 't',
+        'у' => 'u',
+        'ф' => 'f',
+        'х' => 'kh',
+        'ц' => 'ts',
+        'ч' => 'ch',
+        'ш' => 'sh',
+        'щ' => 'shch',
+        'ъ' => '',
+        'ы' => 'y',
+        'ь' => '',
+        'э' => 'e',
+        'ю' => 'yu',
+        'я' => 'ya'
+    ];
+    $word2 = mb_strtolower($word);
+    $result = strtr($word2, $translit);
+    return $result;
 };
-function subtraction($a, $b){
-    return $a - $b;
-};
-function multiplication($a, $b){
-    return $a * $b;
-};
-function division($a, $b){
-    return $a / $b;
-};
+echo func3('слово помидор');
 // задание 4
-function mathOperation($arg1, $arg2, $operation){
-    switch ($operation){
-        case '+':
-            return addition($arg1,$arg2);
-        case '-':
-            return subtraction($arg1,$arg2);
-        case '*':
-            return multiplication($arg1,$arg2);
-        case '/':
-            return division($arg1,$arg2);    
+function func4($mass){
+    echo '<ul>';
+    foreach($mass as $key => $value){
+        if(!is_array($value)){
+            echo '<li>';
+            echo $value;
+            echo '</li>';
+            echo '<br>';
+        } else{
+            echo '<li>';
+            echo $key;
+            echo '</li>';
+            func4($value);
+        };
     }
-}
+    echo '</ul>';
+};
+func4($regions);
 ?>
 
 
@@ -90,5 +101,6 @@ function mathOperation($arg1, $arg2, $operation){
     <title><?= $title ?></title>
 </head>
 <body>
+    
 </body>
 </html>
