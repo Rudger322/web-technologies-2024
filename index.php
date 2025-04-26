@@ -13,6 +13,7 @@ function func(){
         return $a + $b;
     };
 }
+echo func();
 // задание 2
 function func2(){
     $a = rand(0,15);
@@ -53,6 +54,8 @@ function func2(){
             echo 15;
     }
 }
+echo '<br>';
+func2();
 // задание 3
 function addition($a, $b){
     return $a + $b;
