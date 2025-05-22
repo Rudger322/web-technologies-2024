@@ -11,7 +11,7 @@ function getCurrentTimeWithDeclension() {
 
     return "$hours $hourText $minutes $minuteText";
 }
-
+echo getCurrentTimeWithDeclension();
 function declension($number, $forms) {
     $n = abs($number) % 100;
     $n1 = $n % 10;
